@@ -1,16 +1,11 @@
-
-
-# Usar la imagen oficial de Nginx como base
+# Usa la imagen oficial de Nginx
 FROM nginx:latest
 
-# Establecer el directorio de trabajo
-WORKDIR /usr/share/nginx/html
-
-# Copiar el archivo index.html al directorio de Nginx
-COPY index.html .
-
-# Exponer el puerto 8082
+# Expone el puerto 8082 para que el servidor esté accesible desde el puerto 8082 de tu computadora
 EXPOSE 8082
 
-# Comando por defecto para ejecutar Nginx
+# Copia el archivo HTML que creaste a la carpeta donde Nginx busca el archivo de inicio
+COPY ./index.html /usr/share/nginx/html/index.html
+
+# Inicia el servidor Nginx
 CMD ["nginx", "-g", "daemon off;"]

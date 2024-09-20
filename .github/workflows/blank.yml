@@ -35,7 +35,7 @@ jobs:
 
     # Ejecutar el contenedor a partir de la imagen Docker
     - name: Run Docker container
-      run: docker run -i --name c_hello-world hello-world:latest
+      run: docker run -id --name c_hello-world hello-world:latest
 
     # (Opcional) Verificar si el contenedor está corriendo correctamente
     - name: Verify Docker container is running

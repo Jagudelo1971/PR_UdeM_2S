@@ -2,7 +2,7 @@
 FROM nginx:latest
 
 # Copiar el archivo HTML al directorio predeterminado de Nginx
-COPY Home.html /usr/share/nginx/html/
+COPY index.html /usr/share/nginx/html/
 
 # Exponer el puerto 8082
 EXPOSE 8082

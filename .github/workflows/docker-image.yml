@@ -24,7 +24,7 @@ jobs:
 
     # Build the Docker image
     - name: Build and tag the Docker image
-      run: docker build . --file Dockerfile --tag jeronimovelasquez/my-image-name:latest  # Usa tu nombre de usuario
+      run: docker build ./nginx --file ./nginx/Dockerfile --tag jeronimovelasquez/my-image-name:latest
 
     # Push the Docker image to Docker Hub
     - name: Push Docker image to Docker Hub

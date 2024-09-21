@@ -3,8 +3,8 @@ name: Build and Run docker container
 # Ejecutar el workflow en cada push a la rama main
 on:
   push:
-    branches:
-      - main
+    #branches:
+      #- main
 
 jobs:
   build:
